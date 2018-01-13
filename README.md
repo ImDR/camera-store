@@ -49,3 +49,5 @@ method: POST
 url: http://localhost/camera-store/public/user/{id}/cart
 
 method: GET
+
+example: http://localhost/camera-store/public/user/1/cart
