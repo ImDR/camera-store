@@ -1,6 +1,8 @@
 # Camera Store Challenge
 
-This challenge is completed in Lumen (5.5.2) (Laravel Components 5.5.*). Lumen is a “micro-framework” built by Laravel. It has been designed to develop micro services or RESTful API.
+This challenge is completed in Lumen (5.5.2) (Laravel Components 5.5.*).
+
+Lumen is a “micro-framework” built by Laravel. It has been designed to develop micro services or RESTful API.
 
 Command for Migrations and Seeding
 ``php artisan migrate:refresh --seed``
