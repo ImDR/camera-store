@@ -34,6 +34,8 @@ url: http://localhost/camera-store/public/login
 
 method: POST
 
+parameters: email (required), password (required)
+
 ### 5. add product to cart
 
 **Request**
@@ -41,6 +43,16 @@ method: POST
 url: http://localhost/camera-store/public/cart
 
 method: POST
+
+parameters: product_id (required), qty (required)
+
+### get my cart
+
+**Request**
+
+url: http://localhost/camera-store/public/cart
+
+method: GET
 
 ### 6. get cart for a speciﬁc user 
 
