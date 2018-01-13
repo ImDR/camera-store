@@ -1,6 +1,7 @@
 # Camera Store Challenge
 
-[php artisan migrate:refresh --seed]
+Command for Migrations and Seeding
+``php artisan migrate:refresh --seed``
 
 ### 1. list all products
 
