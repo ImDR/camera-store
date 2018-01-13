@@ -1,5 +1,7 @@
 # Camera Store Challenge
 
+[php artisan migrate:refresh --seed]
+
 ### 1. list all products
 
 **Request**
