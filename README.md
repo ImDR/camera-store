@@ -46,7 +46,7 @@ method: POST
 
 parameters: product_id (required), qty (required)
 
-### get my cart
+### 5.2. get my cart
 
 **Request**
 
