@@ -1,6 +1,6 @@
 # Camera Store Challenge
 
-1. list all products
+## 1. list all products
 
 **Request**
 
@@ -8,7 +8,7 @@ url: http://localhost/camera-store/public/product
 
 method: GET
 
-2. list all categories 
+## 2. list all categories 
 
 **Request**
 
