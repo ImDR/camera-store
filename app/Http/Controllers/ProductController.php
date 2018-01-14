@@ -14,17 +14,19 @@ class ProductController extends Controller
 
     public function products(){
     	$products = Product::all()->toArray();
-    	return response()->json($products);
+    	return response()->json(['status'=>'success', 'items'=> $products]);
     }
 
     public function categories(){
     	$categories = Category::all()->toArray();
-    	return response()->json($categories);
+    	return response()->json(['status'=>'success', 'items'=> $categories]);
     }
 
     public function getProductsByCategory($id){
-        $products = Category::find($id)->products;
-    	//$products = Product::where('cat_id', $id)->get()->toArray();
-    	return response()->json($products);
+        $category = Category::find($id);
+        if($category){
+            return response()->json(['status'=>'success', 'items'=> $category->products]);
+        }
+    	return response()->json(['status'=>'fail', 'message'=>'category does not exist.']);
     }
 }
