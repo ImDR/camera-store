@@ -74,7 +74,7 @@ class UserController extends Controller
     
     public function getCartItems($id){
         $items = User::find($id)->cart()->get()->toArray();
-        if(count($items)){
+        if(count($items)>0){
             return response()->json(['status'=>'success', 'items'=> $items]);
         }
         return response()->json(['status'=>'success', 'message'=> 'shopping cart is empty']);
