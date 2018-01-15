@@ -2,7 +2,7 @@
 
 This challenge is completed in Lumen (5.5.2) (Laravel Components 5.5.*).
 
-Lumen is a “micro-framework” created by Laravel. It has been designed to develop micro services or RESTful API.
+Lumen is a “micro-framework” by Laravel. It has been designed to develop micro services or RESTful API.
 
 **Migration and Seeding**
 
