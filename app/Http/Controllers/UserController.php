@@ -51,15 +51,15 @@ class UserController extends Controller
         $count = Auth::user()->cart()->wherePivot('product_id', $request->input('product_id'))->get()->count();
 
         if($product){
-            if($count==0 && $request->input('qty')>0){
-                Auth::user()->cart()->attach($product, ['qty'=>$request->input('qty')]);
-                return response()->json(['status' => 'success', 'message'=> 'item successfully added to your cart.']);
+            if($count>0 && $request->input('qty')>0){
+                Auth::user()->cart()->updateExistingPivot($product->getKey(), ['qty'=>$request->input('qty')]);
+                return response()->json(['status' => 'success', 'message'=> 'Your shopping cart was successfully updated.']);
             }elseif($count > 0 && $request->input('qty') == 0){
                 Auth::user()->cart()->detach($product);
                 return response()->json(['status' => 'success', 'message'=> 'item successfully removed from cart.']);
             }else{
-                Auth::user()->cart()->updateExistingPivot($product->getKey(), ['qty'=>$request->input('qty')]);
-                return response()->json(['status' => 'success', 'message'=> 'Your shopping cart was successfully updated.']);
+                Auth::user()->cart()->attach($product, ['qty'=>$request->input('qty')]);
+                return response()->json(['status' => 'success', 'message'=> 'item successfully added to your cart.']);
             }
         }
 
